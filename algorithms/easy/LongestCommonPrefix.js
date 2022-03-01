@@ -1,18 +1,21 @@
-var longestCommonPrefix = function(strs) {
-    let result = "";
-    let lettersToCheck = strs[0]; // pick the first word to check prefix
-    for (let i = 0; i < lettersToCheck.length; i++) { // iterate lettersToCheck array from the first letter to the last letter
-        let isDone = false; // flag for break
-        for (let j = 1; j < strs.length; j++) { // iterate strs array from the second word to the last word
-            if (lettersToCheck[i] != strs[j][i]) { // check if the word contains letter in lettersToCheck
-                isDone = true;
-                break;
-            }
-        }
-        if (isDone) 
-            break;
-        result += lettersToCheck[i]; // add contained letter to the result 
-    }
-    return result;
-    
+var mergeTwoLists = function(list1, list2) {
+    console.log(list1.val);
+    console.log(list2.val);
+    console.log("-------");
+    list1.next = list1;
+    list2.next = list2;
+    mergeTwoLists(list1, list2);
 };
+
+function ListNode(val, next) {
+    this.val = (val === undefined ? 0 : val)
+    this.next = (next === undefined ? null : next)
+}
+
+let link1 = new ListNode(1, null);
+link1.next = new ListNode(2, null);
+
+let link2 = new ListNode(1, null);
+link2.next = new ListNode(3, null);
+
+mergeTwoLists(link1, link2);
