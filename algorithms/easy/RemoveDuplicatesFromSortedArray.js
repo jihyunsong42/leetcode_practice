@@ -12,5 +12,5 @@ var removeDuplicates = function(nums) {
     }
     return count + 1;
 };
-let nums = [1, 1, 2];
+
 removeDuplicates(nums);
