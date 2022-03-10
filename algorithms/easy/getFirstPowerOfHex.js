@@ -14,10 +14,6 @@ const getFirstPowerOfHex = (pow) => {
 
     // If the number does not have floating point, I'll just keep going with it.
 
-    console.log(numToStr.includes("1"));
-    console.log(numToStr.includes("2"));
-    console.log(numToStr.includes("4"));
-    console.log(numToStr.includes("8"));
     if (!numToStr.includes("1") || !numToStr.includes("2") || !numToStr.includes("4") || !numToStr.includes("8")) { 
       // if the number does NOT include 1, 2, 4, OR 8
       return res; // Return the result
